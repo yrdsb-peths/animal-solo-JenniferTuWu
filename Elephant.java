@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Elephant extends Actor
 {    
-    GreenfootSound elephantSound2 = new GreenfootSound("elephantSound2.mp3");
+    GreenfootSound eat = new GreenfootSound("eat.mp3");
     GreenfootImage idle[] = new GreenfootImage[8];
     
     public Elephant(){
@@ -59,7 +59,7 @@ public class Elephant extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.createApple();
             world.increaseScore();
-            elephantSound2.play();
+            eat.play();
         }
     }
 }
