@@ -15,6 +15,7 @@ public class Apple extends Actor
     
     public Apple(){
         setImage("images/apple2.png");
+        
     }
     
     public void act()
