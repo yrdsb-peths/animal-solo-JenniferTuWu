@@ -15,6 +15,7 @@ public class Elephant extends Actor
         for(int i = 0; i < idle.length; i++)
         {
             idle[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+            idle[i].scale(100,100);
         }
         setImage(idle[0]);
     }
@@ -23,9 +24,15 @@ public class Elephant extends Actor
      * Animate the elephant
      */
     int imageIndex = 0;
+    int animationCounter = 0;
+    int animationSpeed = 15;
     public void animateElephant(){
-        setImage(idle[imageIndex]);
-        imageIndex = (imageIndex + 1) % idle.length;
+        animationCounter++;
+        if (animationCounter >= animationSpeed){
+            animationCounter = 0;
+            imageIndex = (imageIndex + 1) % idle.length;
+            setImage(idle[imageIndex]);
+        }
     }
     
     public void act()
