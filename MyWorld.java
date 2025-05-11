@@ -3,6 +3,7 @@ import greenfoot.*;
 public class MyWorld extends World {
     public int score;
     Label scoreLabel;
+    GreenfootSound elephantSound = new GreenfootSound("elephantSound.mp3");
     
     public MyWorld() {
         super(600, 400, 1, false);
@@ -24,6 +25,7 @@ public class MyWorld extends World {
     public void gameOver(){
         Label gameOverLabel = new Label("Game Over", 100);
         addObject(gameOverLabel, 300, 200);
+        elephantSound.play();
     }
     
     
