@@ -19,4 +19,15 @@ public class TitleScreen extends World
         
         addObject(titleLabel, getWidth()/2, getHeight()/2);
     }
+    
+    /**
+     * The main world act loop
+     */
+    public void act(){
+        //start the game if user presses the space bar
+        if(Greenfoot.isKeyDown("space")){
+            MyWorld gameWorld = new MyWorld();
+            Greenfoot.setWorld(gameWorld);
+        }
+    }
 }
