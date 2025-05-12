@@ -3,6 +3,7 @@ import greenfoot.*;
 public class MyWorld extends World {
     public int score;
     Label scoreLabel;
+    int level = 1;
     GreenfootSound elephantSound = new GreenfootSound("elephantSound.mp3");
     
     public MyWorld() {
@@ -35,11 +36,16 @@ public class MyWorld extends World {
     public void increaseScore(){
         score++;
         scoreLabel.setValue(score);
+        
+        if(score % 5 == 0){
+            level += 1;
+        }
     }
     
     //random location for apples 
     public void createApple(){
         Apple apple = new Apple();
+        apple.setSpeed(level);
         int x = Greenfoot.getRandomNumber(500);
         int y = 0;
         addObject(apple, x, y);

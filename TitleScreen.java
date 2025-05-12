@@ -47,8 +47,8 @@ public class TitleScreen extends World
         Label label2 = new Label("Use \u21D0 and \u21D2 to Move", 40);
         addObject(label2,51,245);
         
-        label2.setLocation(259,291);
-        label.setLocation(232,218);
+        label2.setLocation(250,291);
+        label.setLocation(250,218);
         elephant.setLocation(525,213);
     }
 }
